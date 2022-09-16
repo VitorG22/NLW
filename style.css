@@ -1,0 +1,165 @@
+:root{
+    --gradiente:linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    line-height: 160%;
+}
+body{
+    display:flex;
+    flex-direction:column;
+    height: 100vh;
+    font-family: inter;
+    background-image:url(./assets/Fundo.jpg);
+    background-position:top center;
+    background-repeat: no-repeat;
+    background-color:#121214;
+    align-items: center;
+}
+
+main{
+    align-items: center;
+    margin:32px auto;
+    align-items: start;
+    max-width:580px;
+    width: 90%;
+}
+
+header{
+    display:flex;
+    margin-top:15px;
+    align-items: center;
+    justify-content: center;
+    transition:transform 0.3s;
+}
+
+header img{
+    height: 100px;
+    border-radius:50%;
+    position:relative;
+    
+}
+
+header:before{
+    content:'';
+    background:var(--gradiente);
+    align-items: center;
+    position:absolute;
+    display:flex;
+    height:108px;
+    width: 108px;
+    border-radius:50%;
+}
+
+header:hover{
+    transform: scale(1.1);
+}
+
+ul{
+    display:flex;
+    list-style: none;
+    gap:16px;
+    margin-top:24px;
+    flex-wrap: wrap;
+}
+ul li{
+    transition: ease .3s
+}
+
+ul li:hover{
+    transform:scale(1.1);
+}
+
+.cards{
+    background:var(--gradiente);
+    display:block;
+    margin-bottom:24px;
+    padding-top: 4px;
+    border-radius:8px;
+}
+
+section{
+    background-color: #2A2634;
+    padding:32px;
+    padding-top:24px;
+    border-radius:8px;
+}
+
+
+.mygames img{
+    border-radius:8px;
+    width: 90px;
+}
+
+.streamers img{
+    border-radius:50%;
+    width: 70px;
+    border:solid 1px #A1A1AA;
+}
+
+
+p{
+    color:#A1A1AA;
+    letter-spacing:-0.18px;
+}
+
+h2{
+    color:#FFFFFF;
+    letter-spacing: -0.47px;
+}
+
+
+
+    /*/////// ANIMAÇÕES ////////*/
+
+header{
+    animation: form_top  1s;
+
+}
+
+.cards{
+    animation:from_left 1s backwards;
+}
+.cards:nth-child(1){
+    animation-delay: 0s;
+}
+.cards:nth-child(2){
+    animation-delay: 0.5s;
+}
+.cards:nth-child(3){
+    animation-delay: 1s
+}
+
+@keyframes form_top{
+    0%{
+        opacity:0;
+        transform:translateY(-30px)
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0px)
+    }
+}
+
+@keyframes from_left {
+    0%{
+        opacity: 0;
+        transform:translateX(-30px)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+
+
+
+
+
+
